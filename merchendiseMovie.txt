@@ -1,0 +1,38 @@
+package Movies;
+
+class merchandiseMovie extends movie {
+    private double merchandiseSales;
+    private double ticketSales;
+
+    public merchandiseMovie(String title, double merchandiseSales, double ticketSales) {
+        super(title);
+        this.merchandiseSales = merchandiseSales;
+        this.ticketSales = ticketSales;
+    }
+
+    public double getMerchandiseSales() {
+        return merchandiseSales;
+    }
+
+    public void setMerchandiseSales(double merchandiseSales) {
+        this.merchandiseSales = merchandiseSales;
+    }
+
+    public double getTicketSales() {
+        return ticketSales;
+    }
+
+    public void setTicketSales(double ticketSales) {
+        this.ticketSales = ticketSales;
+    }
+
+    @Override
+    String displayInfo() {
+        return "Merchandise Movie: " + getTitle() + "\n Merchandise Sales: $" + merchandiseSales + "\n Ticket Sales: $" + ticketSales;
+    }
+
+    @Override
+    double calculateRevenue() {
+        return merchandiseSales + ticketSales;
+    }
+}

@@ -1,0 +1,18 @@
+package Movies;
+
+public class Main {
+    public static void main(String[] args) {
+        movie[] movies = {
+                new theaterMovie("Insidious", 12.00, 1000000),
+                new streamingMovie("Bird Box", 5000000, 20000000),
+                new merchandiseMovie("The Nun", 8000000, 5000000)
+        };
+
+        for (movie Movie : movies) {
+            System.out.println(Movie.displayInfo());
+            System.out.printf("Calculated Revenue: $%.2f\n", Movie.calculateRevenue());
+            System.out.println("----------------------------");
+        }
+    }
+}
+

@@ -1,0 +1,39 @@
+package Movies;
+
+class theaterMovie extends movie {
+    private double ticketPrice;
+    private int ticketsSold;
+
+    public theaterMovie(String title, double ticketPrice, int ticketsSold) {
+        super(title);
+        this.ticketPrice = ticketPrice;
+        this.ticketsSold = ticketsSold;
+    }
+
+    public double getTicketPrice() {
+        return ticketPrice;
+    }
+
+    public void setTicketPrice(double ticketPrice) {
+        this.ticketPrice = ticketPrice;
+    }
+
+    public int getTicketsSold() {
+        return ticketsSold;
+    }
+
+    public void setTicketsSold(int ticketsSold) {
+        this.ticketsSold = ticketsSold;
+    }
+
+    @Override
+    String displayInfo() {
+        return "Theater Movie: " + getTitle() + "\n Ticket Price: $" + ticketPrice + "\n Tickets Sold: " + ticketsSold;
+    }
+
+    @Override
+    double calculateRevenue() {
+        return ticketPrice * ticketsSold;
+    }
+}
+

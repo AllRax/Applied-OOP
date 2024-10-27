@@ -1,0 +1,19 @@
+package Movies;
+abstract class movie {
+    private String title;
+
+    public movie(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    abstract String displayInfo();
+    abstract double calculateRevenue();
+}

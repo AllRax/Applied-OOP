@@ -1,0 +1,39 @@
+package Movies;
+
+class streamingMovie extends movie {
+    private double subscriptionRevenue;
+    private int views;
+
+    public streamingMovie(String title, double subscriptionRevenue, int views) {
+        super(title);
+        this.subscriptionRevenue = subscriptionRevenue;
+        this.views = views;
+    }
+
+    public double getSubscriptionRevenue() {
+        return subscriptionRevenue;
+    }
+
+    public void setSubscriptionRevenue(double subscriptionRevenue) {
+        this.subscriptionRevenue = subscriptionRevenue;
+    }
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
+    }
+
+    @Override
+    String displayInfo() {
+        return "Streaming Movie: " + getTitle() + "\n Subscription Revenue: $" + subscriptionRevenue + "\n Views: " + views;
+    }
+
+    @Override
+    double calculateRevenue() {
+        return subscriptionRevenue + (views * 0.05);
+    }
+}
+
